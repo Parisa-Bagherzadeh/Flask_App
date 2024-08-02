@@ -9,7 +9,10 @@ This Flask application is designed to provide an admin panel for managing variou
 
 ## Installation
 1. Clone the repository: git clone https://github.com/Parisa-Bagherzadeh/Flask_App.git
-2. Install dependencies: pip install -r requirements.txt
+2. Install dependencies: 
+```
+pip install -r requirements.txt
+```
 
 
 ## Usage
