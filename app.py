@@ -10,7 +10,7 @@ from datetime import datetime
 # from ultralytics import YOLO
 # from deepface import DeepFace
 
-import cv2
+# import cv2
 
 
 
@@ -224,22 +224,22 @@ def upload():
                 if allowed_file(my_image.filename):
                     flash(my_image.filename)
                     save_path = os.path.join(app.config["UPLOAD_FOLDER"], my_image.filename)
-                    image = cv2.imread(save_path)
-                    print(image)
-                    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-                    model = YOLO("yolov8n.pt")
-                    results = model.predict(save=True, source=image)
-                    for result in results:
-                        boxes = result.boxes
-                        for box in boxes:
-                            coor = box.xyxy.tolist()
-                            x = int(coor[0][0])
-                            y = int(coor[0][1])
-                            w = int(coor[0][2]) - int(coor[0][0])
-                            h = int(coor[0][3]) - int(coor[0][1])
-                            new_image = image.copy()
-                            image_box = cv2.rectangle(new_image,(x, y), (w, h),(255, 0, 0), 2)
-                            cv2.imshow("Image", image_box)
+                    # image = cv2.imread(save_path)
+                    # print(image)
+                    # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+                    # model = YOLO("yolov8n.pt")
+                    # results = model.predict(save=True, source=image)
+                    # for result in results:
+                    #     boxes = result.boxes
+                    #     for box in boxes:
+                    #         coor = box.xyxy.tolist()
+                    #         x = int(coor[0][0])
+                    #         y = int(coor[0][1])
+                    #         w = int(coor[0][2]) - int(coor[0][0])
+                            # h = int(coor[0][3]) - int(coor[0][1])
+                            # new_image = image.copy()
+                            # image_box = cv2.rectangle(new_image,(x, y), (w, h),(255, 0, 0), 2)
+                            # cv2.imshow("Image", image_box)
 
                 else:
                     flash("You are allowed to upload just images") 
