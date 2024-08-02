@@ -18,4 +18,8 @@ pip install -r requirements.txt
 ## Usage
 1. Access the admin panel by navigating to /admin in your browser.
 2. Upload images or videos for object or pose detection.
-3. View the results provided by the AI services.
+3. View the results provided by the AI services.  
+
+
+## Deployments  
+The app has been deployed here: https://judicial-beaver-flaskappaiservicesonline-4e11c610.koyeb.app/
